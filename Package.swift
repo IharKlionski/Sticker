@@ -16,6 +16,8 @@ let package = Package(
         ),
     ],
     targets: [
-        .target(name: "Sticker"),
+        .target(name: "Sticker"
+                condition: .when(platform: .iOS, version: .v17)
+               ),
     ]
 )
